@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Edit Assistant Form</title>
+</head>
+<body>
+    <h1>Edit Assistant Form</h1>
+    <form action="/updateassistant/<%= assistant._id %>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= assistant.name %>" required><br>
+
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" name="mobile" value="<%= assistant.mobile %>" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="<%= assistant.email %>" required><br>
+
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" value="<%= assistant.salary %>" required><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" value="<%= assistant.city %>" required><br>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" value="<%= assistant.country %>" required><br>
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" value="<%= assistant.department %>" required><br>
+
+        <label for="role">Role:</label>
+        <input type="text" id="role" name="role" value="<%= assistant.role %>" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

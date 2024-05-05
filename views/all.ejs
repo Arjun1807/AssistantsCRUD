@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Assistants</title>
+    <link rel="stylesheet" href="/stylesheets/style1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Assistants List</h1>
+            <ol>
+                <% assistants.forEach(assistant => { %>
+                    <li>  <a href="/assistant/<%= assistant._id %>"> <%= assistant.name %> </a></li>
+                <% }); %>
+            </ol>
+            <li class="link"><a  href="/newassistant">Create New Assistant</a></li>
+        </div>
+    </div>
+</body>
+</html>
